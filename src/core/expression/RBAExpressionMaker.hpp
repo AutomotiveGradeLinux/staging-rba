@@ -40,7 +40,7 @@ public:
   virtual ~RBAExpressionMaker()=default;
 
 protected:
-  /// @brief To set ”Let" expression
+  /// @brief To set "Let" expression
   /// @details Generate Let expression from jsonElem and register it in expr.
   ///          Return the number of variables that have been registered
   ///          (pushed) to ModelFactory, and pop them when the reference of 

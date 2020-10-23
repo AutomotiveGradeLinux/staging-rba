@@ -35,7 +35,7 @@ protected:
   RBASoundContentState(RBASoundContentState&&)=delete;
   RBASoundContentState& operator=(const RBASoundContentState&)=delete;
   RBASoundContentState& operator=(RBASoundContentState&&)=delete;
-  ~RBASoundContentState()=default;音声コンテントクラス
+  ~RBASoundContentState()=default;
 
 public:
   /**
@@ -66,7 +66,7 @@ public:
    * The order of the sound content state does not include the output request
    * of the view content state.
    */
-  virtual std::int32_t getOrder() con音声コンテントクラスst=0;
+  virtual std::int32_t getOrder() const=0;
 
   /**
    * @brief Returns the unique character string of the sound contents state.

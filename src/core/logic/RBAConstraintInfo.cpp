@@ -135,7 +135,7 @@ void RBAConstraintInfo::clear()
     // @Deviation (MEM05-CPP,Rule-7_5_4,A7-5-2)
     //  [Contents that deviate from the rules]
     //   recursively calling clear()
-    // 　[Reason that there is no problem if the rule is deviated]
+    //   [Reason that there is no problem if the rule is deviated]
     //   ConstraintInfo is created for each node in the Constraint expression 
     //   tree. The Constraint expression tree is determined by the constraint 
     //   expressions written in the model file, and its depth is finite.
@@ -177,7 +177,7 @@ bool RBAConstraintInfo::needsReRearbitrationFor(
           //  [Contents that deviate from the rules]
           //   Function '::rba::RBAConstraintInfo::needsReRearbitrationFor=(_,
           //                          p={c::rba::RBAAllocatable})' is recursive.
-          // 　[Reason that there is no problem if the rule is deviated]
+          //   [Reason that there is no problem if the rule is deviated]
           //   Recursive call is required as a feature
           result = children_.back()->needsReRearbitrationFor(allocatable);
         }
@@ -198,7 +198,7 @@ bool RBAConstraintInfo::needsReRearbitrationFor(
 bool RBAConstraintInfo::needsRearbitrationFor(const RBAAllocatable* const allocatable,
                                               bool isImplies) const
 {
-  bool result {false};  // 再調停要否
+  bool result {false};  // Necessity of re-arbitration
   if (children_.empty() == false) {
     // When the syntax of the constraint expression is 
     //  - ImpliesOperator
@@ -248,13 +248,13 @@ bool RBAConstraintInfo::needsRearbitrationFor(const RBAAllocatable* const alloca
           //  [Contents that deviate from the rules]
           //   Function '::rba::RBAConstraintInfo::needsRearbitrationFor=(_,
           //                       p={c::rba::RBAAllocatable},_o)' is recursive. 
-          // 　[Reason that there is no problem if the rule is deviated]
+          //   [Reason that there is no problem if the rule is deviated]
           //   Recursive call is required as a feature
           result = (result || child->needsRearbitrationFor(allocatable, isImplies));
         }
         // The Constraint expression does not include IF or implication,
         //  or
-        // the Allocatable state reference expression is not included　in the 
+        // the Allocatable state reference expression is not included  in the 
         // left side of the IF condition of the parent syntax or 
         // the implication of the parent syntax,
         //  or
@@ -333,7 +333,7 @@ void RBAConstraintInfo::collectRearbitrationTargetFor(
         //   Function '::rba::RBAConstraintInfo::collectRearbitrationTargetFor=(_,p={c::rba::RBAAllocatable},
         //     &{c::std::set<p={c::rba::RBAAllocatable},{c::std::less<p={c::rba::RBAAllocatable}>},
         //     {c::std::allocator<p={c::rba::RBAAllocatable}>}>},_o)' is recursive. 
-        // 　[Reason that there is no problem if the rule is deviated]
+        //   [Reason that there is no problem if the rule is deviated]
         //   Recursive call is required as a feature
         children_.front()->collectRearbitrationTargetFor(allocatable, targets,
                                                          !isNot);
@@ -374,7 +374,7 @@ void RBAConstraintInfo::collectTrueAllocatables(
       //     &{c::std::set<p={c::rba::RBAAllocatable},
       //     {c::std::less<p={c::rba::RBAAllocatable}>},
       //     {c::std::allocator<p={c::rba::RBAAllocatable}>}>})' is recursive. 
-      // 　[Reason that there is no problem if the rule is deviated]
+      //   [Reason that there is no problem if the rule is deviated]
       //   Recursive call is required as a feature
       child->collectTrueAllocatables(allocatables);
     }
@@ -411,7 +411,7 @@ void RBAConstraintInfo::collectFalseAllocatables(
       //           {c::std::less<p={c::rba::RBAAllocatable}>},
       //           {c::std::allocator<p={c::rba::RBAAllocatable}>}>})' 
       //   is recursive. 
-      // 　[Reason that there is no problem if the rule is deviated]
+      //   [Reason that there is no problem if the rule is deviated]
       //   Recursive call is required as a feature
       child->collectFalseAllocatables(allocatables);
     }
@@ -440,7 +440,7 @@ bool RBAConstraintInfo::contains(const RBAAllocatable* const allocatable) const
     //   Function '::rba::RBAConstraintInfo::contains=(_,
     //                                p={c::rba::RBAAllocatable})' 
     //   is recursive. 
-    // 　[Reason that there is no problem if the rule is deviated]
+    //   [Reason that there is no problem if the rule is deviated]
     //   Recursive call is required as a feature
     if (child->contains(allocatable)) {
       return true;
@@ -489,7 +489,7 @@ void RBAConstraintInfo::collectAffectedAllocatables(
       // the same processing is performed, because "Exists {A,B}{x|x.isXXX}" 
       // is equivalent to "A.isXXX OR B.isXXX"
       if (!isRevert) {
-        // Processing when "Info" of "OR"　in which evaluation result that is not 
+        // Processing when "Info" of "OR"  in which evaluation result that is not 
         // qualified by an odd number of negative is "Skip" or evaluation reslt 
         // that is not qualified by an odd number of negative is "False".
         if (!isTrue()) {
@@ -507,7 +507,7 @@ void RBAConstraintInfo::collectAffectedAllocatables(
           }
         }
       } else {
-        // Processing when "Info" of "OR"　in which evaluation result that is not 
+        // Processing when "Info" of "OR"  in which evaluation result that is not 
         // qualified by an odd number of negative is "Skip" or evaluation reslt 
         // that is not qualified by an odd number of negative is "False".
         // "!(A.isXXX OR B.isXXX)" can be decomposed into 
@@ -526,7 +526,7 @@ void RBAConstraintInfo::collectAffectedAllocatables(
       //"For-All {A,B}{x|x.isXXX}" is equivalent to "A.isXXX AND B.isXXX", 
       // so the same processing is performed
       if (isRevert) {
-        // Processing when "Info" of "AND"　in which evaluation result that 
+        // Processing when "Info" of "AND"  in which evaluation result that 
         // is not qualified by an odd number of "negative" is "Skip" or 
         // evaluation reslt that is not qualified by an odd number of negative 
         // is "True".
@@ -540,21 +540,21 @@ void RBAConstraintInfo::collectAffectedAllocatables(
             //  [Contents that deviate from the rules]
             //   Function '::rba::RBAConstraintInfo::collectAffectedAllocatables(_,_o,&{c::std::set<p={c::rba::RBAAllocatable},
             //   {c::std::less<p={c::rba::RBAAllocatable}>},{c::std::allocator<p={c::rba::RBAAllocatable}>}>},_o)' is recursive.
-            // 　[Reason that there is no problem if the rule is deviated]
+            //   [Reason that there is no problem if the rule is deviated]
             //   Recursive call is required as a feature
             i->collectAffectedAllocatables(isRevert, affectAllocatables, true,
                                            forObject);
           }
         }
       } else {
-        // Processing when "Info" of "AND"　in which evaluation result that 
+        // Processing when "Info" of "AND"  in which evaluation result that 
         // is not qualified by an odd number of "negative" is "Skip" or 
         // evaluation reslt that is not qualified by an odd number of negative 
         // is "True".
         //
         // When "A.isXXX AND B.isXXX", the evaluation result of "AND" does not 
         // become True unless the evaluation result of B becomes True, 
-        // regardless of the evaluation result of A.　Therefore, A does not 
+        // regardless of the evaluation result of A.  Therefore, A does not 
         // affect B, and B does not affect A.
         // Therefore, "collecting" is as it is, and the "child Info" is 
         // searched for an allocable influence.

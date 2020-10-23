@@ -55,8 +55,8 @@ RBAAffectInfo::addInfoThatFormerAffectedToLatter(const RBAAllocatable* const all
 
 /**
  * @brief Deletes the Affect information of "allocatable" registered by 
- * 　　　　　　　other allocatables registered by arbitration of the specified 
- * 　　　　　　　recursion hierarchy of the specified "allocatable".
+ *               other allocatables registered by arbitration of the specified 
+ *               recursion hierarchy of the specified "allocatable".
  * @param affectAllocatable
  */
 void RBAAffectInfo::removeAffectInfo(const RBAAllocatable* const affectAllocatable)

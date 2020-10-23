@@ -35,7 +35,7 @@ enum class RBAContentLoserType : std::uint8_t;
 enum class RBAExpressionType : std::uint8_t;
 #endif
 
-/// @brief JSONエ Element class
+/// @brief JSON Element class
 class DLL_EXPORT RBAJsonElement
 {
 public:

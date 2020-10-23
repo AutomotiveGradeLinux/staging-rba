@@ -33,7 +33,7 @@ void RBAStateValue::accept(RBAExpressionVisitor& visitor)
 {
   // RBASceneAllocatableCollector which is the only existing vistor
   // does not pass this path because it does not accept 
-  // the expression that returns Value.　But, in the future,
+  // the expression that returns Value.  But, in the future,
   // another visitor may accept, so implement this.
   visitor.visit(*this);
 }

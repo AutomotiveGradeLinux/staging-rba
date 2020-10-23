@@ -90,7 +90,7 @@ RBARuleObject::getUniqueName() const
     // [Contents that deviate from the rules]
     //  Calling getUniqueName() recursively.
     // [Reason that there is no problem if the rule is deviated]
-    // 　Since the number of elements in the rule model is finite and 
+    //   Since the number of elements in the rule model is finite and 
     //  there is no cyclic relationship, stack overflow does not occur.
     return owner_->getUniqueName() + "/" + getElementName();
   }

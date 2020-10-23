@@ -510,7 +510,7 @@ RBAArbitrator::arbitrateMain()
   result_ = std::make_unique<RBAResultImpl>(retResult.get());
 
   // A compile error occurs if std::move() is missing because 
-  // std::unique_ptr<RBAResultImpl>　is cast to std::unique_ptr<RBAResult>
+  // std::unique_ptr<RBAResultImpl>  is cast to std::unique_ptr<RBAResult>
   return std::move(retResult);
 }
 
@@ -659,7 +659,7 @@ arbitrate(std::list<RBAAllocatable*>& allocatables)
     revisited = revisitedInitSet;
     // -------------------------------------------------------------------------
     // To prevent an infinite loop, generate information to limit registration 
-  　　// of other "allocable" that affected the target "allocatable" 
+      // of other "allocable" that affected the target "allocatable" 
     // during arbitration
     // -------------------------------------------------------------------------
     RBAAffectInfo affectInfo;
@@ -825,7 +825,7 @@ void RBAArbitrator::arbitrateAllocatable(
     }
   }
   // ---------------------------------------------------------------------
-  // Re-arbitration of the Allocatable　that influenced
+  // Re-arbitration of the Allocatable  that influenced
   // ---------------------------------------------------------------------
   if ((beforeState != allocatable->getState())
           || allocatable->isHidden()
@@ -876,7 +876,7 @@ void RBAArbitrator::arbitrateAllocatable(
       //  This is a 'const_cast' expression that strips away a 'const' or 
       //  'volatile' qualifier.
       // [Why there is no problem if it deviate from the rules]
-    　　//  Confirmed that there is no problem from the design point of view.
+        //  Confirmed that there is no problem from the design point of view.
       //  We won't fix it now because we need to redesign the class, but
       //  no much effort as of now.
       RBAAllocatable* allo {const_cast<RBAAllocatable*>(affectAllocatable)};
@@ -970,7 +970,7 @@ collectRevisitAllocatable(std::list<const RBAAllocatable*>* const totalRevisitAl
 {
   std::set<const RBAAllocatable*> revisitAllocatablesSet;
 
-　　// Determine if re-arbitration should be done based on the constraint 
+    // Determine if re-arbitration should be done based on the constraint 
   // that the determination was NG
   for(RBAConstraintImpl*& constraint : falseConstraints) {
     // Get Contraint information
@@ -982,7 +982,7 @@ collectRevisitAllocatable(std::list<const RBAAllocatable*>* const totalRevisitAl
       info->collectRearbitrationTargetFor(allocatable, rightFalseAllocatables, false);
     }
     if (rightFalseAllocatables.empty()) {
-      // Non-implication constraint　expression
+      // Non-implication constraint  expression
       // To ensure that "currently arbitrated allocable" does not lose to lower 
       // priority allocable, arbitration of low priority Allocable is performed 
       // if low priority Allocable is included in 
@@ -1211,7 +1211,7 @@ updateResult()
   // Deactivate canceled Content
   result_->updateActiveContentStates();
 
-  // Update coordinates　of Area 
+  // Update coordinates  of Area 
   for(auto& area : result_->getVisibleAreas()) {
     const RBAAreaImpl* const areaImpl {dynamic_cast<const RBAAreaImpl*>(area)};
     const auto posCont = model_->findPositionContainerImpl(area->getName());

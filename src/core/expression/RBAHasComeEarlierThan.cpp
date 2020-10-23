@@ -49,7 +49,7 @@ RBAHasComeEarlierThan::executeCore(RBAConstraintInfo* info,
   LOG_addHierarchy(LOG_getSymbol());
 
   bool isResult {false};
-  // Get content in left side　of the expression
+  // Get content in left side  of the expression
   RBAConstraintInfo* const leftInfo {info->getChild(0U)};
   const RBARuleObject* ruleObj {getLhsOperand()->getReferenceObject(leftInfo, arb)};
   const RBAContent* contentLhs {nullptr};
@@ -57,7 +57,7 @@ RBAHasComeEarlierThan::executeCore(RBAConstraintInfo* info,
     contentLhs = dynamic_cast<const RBAContent*>(ruleObj->getRawObject());
   }
 
-  // Get content in right hand side　of the expression
+  // Get content in right hand side  of the expression
   RBAConstraintInfo* const rightInfo {info->getChild(1U)};
   ruleObj = getRhsOperand()->getReferenceObject(rightInfo, arb);
   const RBAContent* contentRhs {nullptr};

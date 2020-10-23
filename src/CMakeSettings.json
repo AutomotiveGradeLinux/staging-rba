@@ -1,6 +1,5 @@
 ﻿{
   "configurations": [
-    {
       "buildRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
       "configurationType": "Release",
       "generator": "Visual Studio 15 2017 Win64",

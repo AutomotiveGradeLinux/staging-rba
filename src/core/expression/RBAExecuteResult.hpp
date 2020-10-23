@@ -30,7 +30,7 @@ enum class RBAExecuteResult : std::uint8_t
   FALSE,
   EXE,    // In case of action is performed by doAction() 
           // (Excludes SetOfAction and IfAction)
-  NOTEXE, // In case of action is NOT performed　by doAction()
+  NOTEXE, // In case of action is NOT performed  by doAction()
           // (Excludes SetOfAction and IfAction)
   SKIP    // In case of getValue() or getReferenceObject()
 };

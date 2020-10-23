@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 /// @file  RBASceneMaker.hpp
-/// @brief Scene　object generator class header
+/// @brief Scene  object generator class header
 
 #ifndef RBASCENEMAKER_HPP
 #define RBASCENEMAKER_HPP
@@ -24,7 +24,7 @@
 namespace rba
 {
 
-/// @brief Scene　object generator class
+/// @brief Scene  object generator class
 class RBASceneMaker : public RBARuleObjectMaker
 {
 public:

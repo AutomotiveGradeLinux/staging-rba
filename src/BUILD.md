@@ -11,9 +11,9 @@ This document describes build of Rule Based Arbitrator
 | rba/include/ | header files  |
 | rba/src/ | source code files |
 | rba/lib/ | libraries |
-| rba/lib/librba.a | Arbitrator staticl lib<br>（on Linux） |
-| rba/lib/librba.so | Arbitrator shared lib<br>（on Linux） |
-| rba/lib/rba.dll | Arbitrator DLL<br>（on Windows） |
+| rba/lib/librba.a | Arbitrator staticl lib<br>(on Linux) |
+| rba/lib/librba.so | Arbitrator shared lib<br>(on Linux) |
+| rba/lib/rba.dll | Arbitrator DLL<br>(on Windows) |
 | rba/unittest/ | for unit test |
 | rba/doc/ | Documents |
 | rba/script/ | include script file |

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 /// @file  RBASceneMaker.cpp
-/// @brief Scene　object generator class
+/// @brief Scene  object generator class
 
 #include "RBASceneMaker.hpp"
 #include "RBASceneImpl.hpp"

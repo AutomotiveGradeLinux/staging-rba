@@ -74,7 +74,7 @@ RBAObjectCompare::executeCore(RBAConstraintInfo* info,
       if ((lhobj != nullptr) && (rhobj != nullptr)) {
         if (lhobj->getRawObject() == rhobj->getRawObject()) {
           isPassed = true;
-　　　　　　　　　　// Even if re-arbitration is performed for "ObjectCompare" that uses 
+                    // Even if re-arbitration is performed for "ObjectCompare" that uses 
           // "ObjectRefrence" as an operand, the evaluation result does not  
           // change from false to True, so it is not necessary to add  
           // "FalseAllocatable" or "TrueAllocatabe" for re-arbitration.

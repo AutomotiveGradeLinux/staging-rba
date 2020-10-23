@@ -15,7 +15,7 @@
  */
 
 //
-// IsTypeOfクラスヘッダファイル
+// IsTypeOf class header file
 //
 
 #ifndef RBAISTYPEOFOPERATOR_HPP

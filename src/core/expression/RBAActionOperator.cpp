@@ -15,7 +15,7 @@
  */
 
 /* 
- * Action operator class　definition
+ * Action operator class  definition
  */
 
 #include "RBAActionOperator.hpp"

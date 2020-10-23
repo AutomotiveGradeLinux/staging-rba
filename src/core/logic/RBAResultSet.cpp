@@ -267,7 +267,7 @@ RBAResultSet::getArea(const RBAViewContentState* const state,
           // @Deviation (MEM05-CPP,Rule-7_5_4,A7-5-2)
           //  [Contents that deviate from the rules]
           //   calling getArea() recursively
-          // 　[Reason that there is no problem if the rule is deviated]
+          //   [Reason that there is no problem if the rule is deviated]
           //   When getArea() is performed on CyclicContent, at that time, 
           //   respond Area where ViewContent assigned to CyclicContent 
           //   is assigned. When CyclicContent is assigned to CyclicContent, 
@@ -301,7 +301,7 @@ RBAResultSet::getZone(const RBASoundContentState* const state,
           //                  &{c::std::__cxx11::list<p={c::rba::RBAZone},
           //                  {c::std::allocator<p={c::rba::RBAZone}>}>})' 
           //   is recursive. 
-          // 　[Reason that there is no problem if the rule is deviated]
+          //   [Reason that there is no problem if the rule is deviated]
           //   Recursive call is required as a feature
           getZone(ownerState, zoneList);
         } else {

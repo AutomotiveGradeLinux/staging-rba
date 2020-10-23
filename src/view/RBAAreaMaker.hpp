@@ -31,7 +31,7 @@ public:
   RBAAreaMaker();
   RBAAreaMaker(const RBAAreaMaker&)=default;
   RBAAreaMaker& operator=(const RBAAreaMaker&)=default;
-  // move削除
+  // delete move
   RBAAreaMaker(const RBAAreaMaker&&)=delete;
   RBAAreaMaker& operator=(const RBAAreaMaker&&)=delete;
   virtual ~RBAAreaMaker()=default;

@@ -16,7 +16,7 @@
  */
 
 /**
- * 論理オペレータクラス定義ファイル
+ * LogicalOperator class definition
  */
 
 #include <sstream>

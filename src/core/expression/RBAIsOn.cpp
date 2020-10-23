@@ -63,8 +63,8 @@ RBAIsOn::executeCore(RBAConstraintInfo* info,
     }
   } else {
     // Currently, there is no expression that returns null as "Scene", 
-    // so it does not go through this path. But an expression　that returns null
-    // may be added　in the future, so it is described as it is.
+    // so it does not go through this path. But an expression  that returns null
+    // may be added  in the future, so it is described as it is.
     ;
   }
 #ifdef RBA_USE_LOG
@@ -91,8 +91,8 @@ RBAIsOn::executeCore(RBAConstraintInfo* info,
     }
   } else {
     // Currently, there is no expression that returns null as "Scene", 
-    // so it does not go through this path. But an expression　that returns null
-    // may be added　in the future, so it is described as it is.
+    // so it does not go through this path. But an expression  that returns null
+    // may be added  in the future, so it is described as it is.
     LOG_arbitrateConstraintLogicLogLine(
         "      " + getPreMsg(ruleObj->isPrevious()) + "Scene[NULL] is not On");
     LOG_coverageConstraintExpressionLog(LOG_getCoverageExpressionText(),

@@ -136,7 +136,7 @@ public:
    * Display request or sound request : "<CONTENT_NAME>/<STATE_NAME>"\n
    * If the content has only one state, the <STATE> can be omitted.\n
    * \n
-   * Scene request : ”<SCENE_NAME>”
+   * Scene request : "<SCENE_NAME>"
    * @param require
    * true : request displaying / outputting content or scene on (default)\n
    * false : withdraw a request or scene off.

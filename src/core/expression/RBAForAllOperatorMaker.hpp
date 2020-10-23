@@ -15,7 +15,7 @@
  */
 
 /// @file  RBAForAllOperatorMaker.hpp
-/// @brief ForAllOperator　object generation class header
+/// @brief ForAllOperator object generation class header
 
 #ifndef RBAFORALLOPERATORMAKER_HPP
 #define RBAFORALLOPERATORMAKER_HPP
@@ -25,7 +25,7 @@
 namespace rba
 {
 
-/// @brief ForAllOperator　object generation class
+/// @brief ForAllOperator  object generation class
 class RBAForAllOperatorMaker : public RBALambdaContextMaker
 {
 public:

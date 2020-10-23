@@ -102,11 +102,11 @@ class RBAExpressionVisitor {
   // Refer to Zone status
   virtual void visit(RBAIsOutputted& exp) = 0;
   virtual void visit(RBAOutputtingSound& exp) = 0;
-  // allocatedContent　is common with Area
+  // allocatedContent  is common with Area
   virtual void visit(RBAIsMuted& exp) = 0;
   virtual void visit(RBAIsAttenuated& exp) = 0;
   // contentValue is common with Area
-  // contentsList　is common with Area
+  // contentsList  is common with Area
 
   // Refer to sound content status
   // isActive is common with display content

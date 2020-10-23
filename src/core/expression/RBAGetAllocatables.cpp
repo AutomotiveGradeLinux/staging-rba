@@ -87,7 +87,7 @@ RBAGetAllocatables::getExpressionText() const
 void
 RBAGetAllocatables::createHierarchy()
 {
-  // No operation because　it does not affect structure.
+  // No operation because  it does not affect structure.
 }
 
 #endif

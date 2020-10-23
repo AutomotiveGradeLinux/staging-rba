@@ -79,7 +79,7 @@ RBAGetContentsList::getReferenceObjectCore(RBAConstraintInfo* info,
 void
 RBAGetContentsList::createHierarchy()
 {
-  // No operation because　it does not affect structure.
+  // No operation because  it does not affect structure.
 }
 #endif
 

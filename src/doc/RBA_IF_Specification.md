@@ -14,9 +14,9 @@
 
 ### Table of Contents
 
-​[**1. Purpose of this document**](#anchor0)
+[**1. Purpose of this document**](#anchor0)
 
-​[**2. Arbitration Policy Type class**](#anchor1)  
+[**2. Arbitration Policy Type class**](#anchor1)  
 2.1. Definition name  
 2.2. Overview  
 2.3. Class member

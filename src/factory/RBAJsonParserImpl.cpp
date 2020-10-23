@@ -80,7 +80,7 @@ parse(const std::string& filename)
     return nullptr;
   }
 
-  // Create map between　Area and Costraint
+  // Create map between  Area and Costraint
   createConstraintMap(root->findChildren("area_constraint_map"),
                       RBAConstraintMap::CONTENT_ALLOCATE_CONSTRAINTS);
   createConstraintMap(root->findChildren("area_hidden_true_check_constraint_map"),
@@ -88,7 +88,7 @@ parse(const std::string& filename)
   createConstraintMap(root->findChildren("area_hidden_false_check_constraint_map"),
                       RBAConstraintMap::HIDDEN_FALSE_CHECK_CONSTRAINTS);
 
-  // Create map between　Zone and Costraint
+  // Create map between  Zone and Costraint
   createConstraintMap(root->findChildren("zone_constraint_map"),
                       RBAConstraintMap::CONTENT_ALLOCATE_CONSTRAINTS);
   createConstraintMap(root->findChildren("zone_mute_true_check_constraint_map"),

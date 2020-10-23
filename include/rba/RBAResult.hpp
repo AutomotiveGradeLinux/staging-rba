@@ -96,7 +96,7 @@ public:
    * @return List of active view content states.
    * @details
    * The active view content states are those that have been requested to
-   * display so far.　They do not include the view content state whose request
+   * display so far. They do not include the view content state whose request
    * has been withdrawn or canceled.
    */
   virtual const std::list<const RBAViewContentState*>& getActiveViewContentStates() const=0;
@@ -107,7 +107,7 @@ public:
    * @return List of active sound content states.
    * @details
    * The active sound content states are those that have been requested to
-   * output so far.　They do not include the sound content state whose request
+   * output so far.  They do not include the sound content state whose request
    * has been withdrawn or canceled.
    */
   virtual const std::list<const RBASoundContentState*>& getActiveSoundContentStates() const=0;
@@ -402,7 +402,7 @@ public:
    * @param area Area
    * @return The view content state allocated to the area.
    * @details
-   *　Even if the area is hidden, Returns the allocated content state.\n
+   *  Even if the area is hidden, Returns the allocated content state.\n
    * If no visible view content state is allocated the area, nullptr is returnd.\n
    * If area is not defined in the Model or nullptr, returns nullptr.
    */
@@ -414,7 +414,7 @@ public:
    * @param zone Zone
    * @return The sounding sound content state assign to the zone.
    * @details
-   *　Even if the zone is muted, Returns the allocated content state.\n
+   *  Even if the zone is muted, Returns the allocated content state.\n
    * If no sounding sound content state is allocated the area,
    * nullptr is returnd.\n
    * If zone is not defined in the Model or nullptr, returns nullptr.
@@ -507,6 +507,7 @@ public:
    * @return UNKNOWN_CONTENT_STATE: Failed (The reuqest is unknown)
    * @return CANCEL_ERROR: Cancel arbitrration error
    * @endcond
+   */
   virtual RBAResultStatusType getStatusType() const=0;
 
   /**
@@ -522,6 +523,7 @@ public:
    * @details
    * If the scene or propertyName is not defined in the Model, returns -99.\n
    * @endcond
+   */
   virtual std::int32_t getSceneProperty(const RBAScene* scene, const std::string& propertyName) const=0;
 
   // internal {
@@ -556,7 +558,7 @@ public:
    * @return List of active view content states.
    * @details
    * The active view content states are those that have been requested to
-   * display so far.　They do not include the view content state whose request
+   * display so far.  They do not include the view content state whose request
    * has been withdrawn or canceled.
    */
   virtual const std::list<const RBAViewContentState*>& getPreActiveViewContentStates() const=0;
@@ -567,7 +569,7 @@ public:
    * @return List of active sound content states.
    * @details
    * The active sound content states are those that have been requested to
-   * output so far.　They do not include the sound content state whose request
+   * output so far.  They do not include the sound content state whose request
    * has been withdrawn or canceled.
    */
   virtual const std::list<const RBASoundContentState*>& getPreActiveSoundContentStates() const=0;
@@ -721,7 +723,7 @@ public:
    * @return true: Active
    * @return false: Not active
    *
-   * The active scene is the scene requested　to ON.
+   * The active scene is the scene requested  to ON.
    */
   virtual bool isPreActive(const RBAScene* scene) const=0;
 
@@ -789,7 +791,7 @@ public:
    * @param zone Zone
    * @return The sounding sound content state assign to the zone.
    *
-   *　When a zone is muted, Returns the content state.
+   *  When a zone is muted, Returns the content state.
    * If no sounding sound content state is allocated the area,
    * nullptr is returnd.
    */

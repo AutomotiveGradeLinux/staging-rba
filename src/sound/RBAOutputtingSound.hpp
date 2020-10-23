@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 /**
- * 音声出力クラス
+ * OutputtingSound class header
  */
 
 #ifndef RBAOUTPUTTINGSOUND_HPP

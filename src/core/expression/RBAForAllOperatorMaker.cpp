@@ -15,7 +15,7 @@
  */
 
 /// @file  RBAForAllOperatorMaker.cpp
-/// @brief ForAllOperator　object generation class
+/// @brief ForAllOperator  object generation class
 
 #include "RBAForAllOperatorMaker.hpp"
 #include "RBAJsonElement.hpp"

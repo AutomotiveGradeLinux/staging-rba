@@ -83,7 +83,7 @@ RBAModelElementMaker::getInstance(RBAModelImpl* model,
   }
 
   // In case of Elemetn with name
- 　 if(fullName != "") {
+    if(fullName != "") {
     const auto elem = model->findModelElement(fullName);
     // exists in model
     if(elem != nullptr) {

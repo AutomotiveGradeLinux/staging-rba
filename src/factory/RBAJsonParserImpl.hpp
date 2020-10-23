@@ -15,7 +15,7 @@
  */
 
 /// @file  RBAJsonParserImpl.hpp
-/// @brief JSON　Parser implementation class header file
+/// @brief JSON  Parser implementation class header file
 
 #ifndef RBAJSONPARSERIMPL_HPP
 #define RBAJSONPARSERIMPL_HPP
@@ -30,7 +30,7 @@ namespace rba
 class RBAJsonElement;
 enum class RBAConstraintMap : std::uint8_t;
 
-/// @brief JSON　Parser implementation class
+/// @brief JSON  Parser implementation class
 class RBAJsonParser::Impl
 {
 public:

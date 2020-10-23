@@ -15,7 +15,7 @@
  */
 
 //
-// IsTypeOf class defintion file
+// IsTypeOf class definition file
 //
 
 #include "RBAIsTypeOfOperator.hpp"

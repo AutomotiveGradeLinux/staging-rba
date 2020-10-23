@@ -103,7 +103,7 @@ private:
   std::vector<RBALog*> constraintLogs;
   std::vector<RBALog*> canceledRequestLogs_;
 
-　　// Constraint structure log for finding the denominator of 
+    // Constraint structure log for finding the denominator of 
   // constraint coverage. The constraint log is different 
   // because it also has the execution result.
   std::vector<RBALog*> hierarchyOfConstraintLogs_;
