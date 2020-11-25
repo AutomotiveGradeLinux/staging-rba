@@ -106,4 +106,14 @@ endforeach()
 message(STATUS "*** dump end ***")
 endif(DEBUG_CMAKE)
 
+configure_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/librba.pc.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/librba.pc"
+    @ONLY
+)
+
+install(
+    FILES "${CMAKE_CURRENT_BINARY_DIR}/librba.pc"
+    DESTINATION "${CMAKE_INSTALL_LIBDIR}/pkgconfig"
+)
 # end of file
