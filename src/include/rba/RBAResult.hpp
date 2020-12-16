@@ -111,7 +111,7 @@ public:
    * @return List of active view content states.
    * @details
    * The active view content states are those that have been requested to
-   * display so far.  They do not include the view content state whose request
+   * display so far. They do not include the view content state whose request
    * has been withdrawn or canceled.
    */
   virtual const std::list<const RBAViewContentState*>& getActiveViewContentStates() const=0;

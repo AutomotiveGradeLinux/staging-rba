@@ -15,7 +15,7 @@
  */
 
 /**
- * VIew content state class
+ * View content state class
  */
 
 #ifndef RBAVIEWCONTENTSTATE_HPP

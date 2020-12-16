@@ -15,7 +15,7 @@
  */
 
 /**
- * VIew action class
+ * View action class
  */
 
 #ifndef RBAVIEWACTION_HPP
