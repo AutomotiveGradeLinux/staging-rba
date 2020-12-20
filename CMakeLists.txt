@@ -116,4 +116,39 @@ install(
     FILES "${CMAKE_CURRENT_BINARY_DIR}/librba.pc"
     DESTINATION "${CMAKE_INSTALL_LIBDIR}/pkgconfig"
 )
+
+install(
+    TARGETS rba_shared
+    DESTINATION ${CMAKE_INSTALL_LIBDIR}
+)
+
+install(
+    DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/rba/
+    DESTINATION include
+    FILES_MATCHING
+    PATTERN "*.h*"
+)
+
+install (
+    FILES ${CMAKE_SOURCE_DIR}/src/view/RBAAreaSet.hpp
+    ${CMAKE_SOURCE_DIR}/src/core/model/RBAAllocatableSet.hpp
+    ${CMAKE_SOURCE_DIR}/src/core/model/RBARuleObject.hpp
+    ${CMAKE_SOURCE_DIR}/src/core/model/RBANamedElement.hpp
+    ${CMAKE_SOURCE_DIR}/src/public/RBADllExport.hpp
+    ${CMAKE_SOURCE_DIR}/src/core/model/RBAContentSet.hpp
+    ${CMAKE_SOURCE_DIR}/src/core/model/RBAAbstractAllocatable.hpp
+    ${CMAKE_SOURCE_DIR}/src/core/model/RBAConstraint.hpp
+    ${CMAKE_SOURCE_DIR}/src/view/RBAViewContentSet.hpp
+    ${CMAKE_SOURCE_DIR}/src/sound/RBAZoneSet.hpp
+    ${CMAKE_SOURCE_DIR}/src/core/model/RBAModelElement.hpp
+    ${CMAKE_SOURCE_DIR}/src/core/model/RBAAbstractContent.hpp
+    ${CMAKE_SOURCE_DIR}/src/sound/RBASoundContentSet.hpp
+    ${CMAKE_SOURCE_DIR}/src/core/logic/RBARequestQueMember.hpp
+    ${CMAKE_SOURCE_DIR}/src/core/logic/RBAResultSet.hpp
+    ${CMAKE_SOURCE_DIR}/src/core/model/RBAContentStatusType.hpp
+    ${CMAKE_SOURCE_DIR}/src/core/logic/RBAContentStatus.hpp
+    ${CMAKE_SOURCE_DIR}/src/core/logic/RBAResultImpl.hpp
+    DESTINATION include
+)
+
 # end of file
