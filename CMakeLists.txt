@@ -4,6 +4,7 @@ set(CMAKE_CXX_STANDARD 14) # C++14
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+set(RBA_API_VERSION 1.0)
 set(PROJECT_NAME "rba")
 project(${PROJECT_NAME})
 
@@ -81,8 +82,8 @@ else()
 
 endif(WIN32)
 
-add_library(rba_shared SHARED ${SRC})
-set_target_properties(rba_shared PROPERTIES OUTPUT_NAME ${LIB_NAME})
+add_library(${PROJECT_NAME} SHARED ${SRC})
+set_target_properties(${PROJECT_NAME} PROPERTIES VERSION ${RBA_API_VERSION} SOVERSION ${RBA_API_VERSION})
 
 if(WIN32)
 else()
@@ -118,8 +119,8 @@ install(
 )
 
 install(
-    TARGETS rba_shared
-    DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    TARGETS             ${PROJECT_NAME}
+    LIBRARY DESTINATION lib${LIB_SUFFIX}
 )
 
 install(
