@@ -38,10 +38,6 @@ namespace rba
 {
 
 class RBAModel;
-// internal {
-class RBAExpression;
-class RBAModelFactory;
-// }
 
 /**
  * @class RBAJsonParser
@@ -78,9 +74,6 @@ public:
    */
   RBAModel* parse(const std::string& filename);
 
-  // internal {
-  RBAJsonParser(RBAModelFactory* factory);
-  // }
 
 private:
   class Impl;

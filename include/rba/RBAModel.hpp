@@ -33,13 +33,6 @@
 #include "RBADisplay.hpp"
 #include "RBAPositionContainer.hpp"
 #include "RBAJsonParser.hpp"
-// internal {
-#include "RBAAreaSet.hpp"
-#include "RBAViewContentSet.hpp"
-#include "RBAZoneSet.hpp"
-#include "RBASoundContentSet.hpp"
-#include "RBAConstraint.hpp"
-// }
 
 #ifdef _MSC_VER
 #ifdef _WINDLL
@@ -215,38 +208,10 @@ public:
 
   // internal {
   /**
-   * @brief Search for Model element with a name.
-   * @param elementName Model element name.
-   * @return Model element
-   *
-   * If the Model element name does not exist, returns nullptr.
-   */
-  virtual const RBAModelElement* findModelElement(const std::string& elementName) const=0;
-
-  /**
-   * @brief Returns all the sets of areas.
-   * @return List of sets of areas
-   */
-  virtual const std::list<const RBAAreaSet*>& getAreaSets() const=0;
-
-  /**
-   * @brief Returns all the sets of view contents.
-   * @return List of sets of view contents
-   */
-  virtual const std::list<const RBAViewContentSet*>& getViewContentSets() const=0;
-
-  /**
    * @brief Returns all the position containers.
    * @return List of sets of position containers
    */
   virtual const std::list<const RBAPositionContainer*>& getPositionContainers() const=0;
-
-  /**
-   * @brief Returns all the constraints.
-   * @return List of constraints
-   */
-  virtual std::list<RBAConstraint*>& getConstraints()=0;
-
  // }
 
 };

@@ -18,6 +18,10 @@
 
 #include "RBAModelImpl.hpp"
 #include "RBAConstraintImpl.hpp"
+#include "RBAAreaSet.hpp"
+#include "RBAZoneSet.hpp"
+#include "RBAViewContentSet.hpp"
+#include "RBASoundContentSet.hpp"
 
 namespace rba
 {

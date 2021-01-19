@@ -30,11 +30,6 @@ RBAJsonParser::RBAJsonParser()
 {
 };
 
-RBAJsonParser::RBAJsonParser(RBAModelFactory* factory)
-  : impl_{std::make_unique<RBAJsonParser::Impl>(factory)}
-{
-};
-
 RBAJsonParser::~RBAJsonParser() noexcept
 {
 };

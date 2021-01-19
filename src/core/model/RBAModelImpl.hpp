@@ -42,6 +42,11 @@
 namespace rba
 {
 
+class RBAAreaSet;
+class RBAZoneSet;
+class RBAViewContentSet;
+class RBASoundContentSet;
+
 class DLL_EXPORT RBAModelImpl : public RBAModel
 {
 public:
@@ -62,7 +67,7 @@ public:
   const RBASoundContentState* findSoundContentState(const std::string& stateName) const override;
   const RBAScene* findScene(const std::string& sceneName) const override;
   const RBADisplay* findDisplay(const std::string& displayName) const override;
-  const RBAModelElement* findModelElement(const std::string& elementName) const override;
+  const RBAModelElement* findModelElement(const std::string& elementName) const;
 
   const std::list<const RBAArea*>& getAreas() const override;
   const std::list<const RBAViewContent*>& getViewContents() const override;
@@ -72,13 +77,13 @@ public:
   const std::list<const RBASoundContent*>& getSoundContents() const override;
   const std::list<const RBASoundContentState*>& getSoundContentStates() const override;
   const std::list<const RBAScene*>& getScenes() const override;
-  const std::list<const RBAAreaSet*>& getAreaSets() const override;
-  const std::list<const RBAViewContentSet*>& getViewContentSets() const override;
+  const std::list<const RBAAreaSet*>& getAreaSets() const;
+  const std::list<const RBAViewContentSet*>& getViewContentSets() const;
   virtual const std::list<const RBAZoneSet*>& getZoneSets() const;
   virtual const std::list<const RBASoundContentSet*>& getSoundContentSets() const;
   const std::list<const RBAPositionContainer*>& getPositionContainers() const override;
   const std::list<const RBADisplay*>& getDisplays() const override;
-  std::list<RBAConstraint*>& getConstraints() override;
+  std::list<RBAConstraint*>& getConstraints();
 
   virtual void clearElementsStatus();
   virtual const RBAContentState* findContentState(const std::string& stateName);
