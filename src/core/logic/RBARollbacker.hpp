@@ -29,7 +29,7 @@ namespace rba
 {
 class RBAModel;
 class RBAAllocatable;
-class RBAArbitrator;
+class RBAArbitratorImpl;
 
 class RBARollbacker
 {

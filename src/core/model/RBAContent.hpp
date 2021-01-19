@@ -30,7 +30,7 @@
 namespace rba
 {
 
-class RBAArbitrator;
+class RBAArbitratorImpl;
 class RBAAllocatable;
 class RBAContentState;
 class RBAResultImpl;

@@ -17,7 +17,7 @@
 /// IsGreaterThanEqualOperator class definition file
 
 #include "RBAIsGreaterThanEqualOperator.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAExpressionVisitor.hpp"
 #include "RBALogManager.hpp"
 #include "RBAModelElementType.hpp"
@@ -41,7 +41,7 @@ RBAIsGreaterThanEqualOperator::getModelElementType() const
 
 bool
 RBAIsGreaterThanEqualOperator::executeCore(RBAConstraintInfo* info,
-                                           RBAArbitrator* arb) const
+                                           RBAArbitratorImpl* arb) const
 {
   bool isPassed {false};
   // Add itself to Constraint hierarchy for coverage

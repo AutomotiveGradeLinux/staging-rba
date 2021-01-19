@@ -40,7 +40,7 @@ public:
   void accept(RBAExpressionVisitor& visitor) override;
   RBAModelElementType getModelElementType() const override;
   const RBARuleObject* getReferenceObjectCore(RBAConstraintInfo* info,
-                                              RBAArbitrator* arb) const override;
+                                              RBAArbitratorImpl* arb) const override;
 
   // Log
 #ifdef RBA_USE_LOG

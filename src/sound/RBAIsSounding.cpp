@@ -18,7 +18,7 @@
 #include <algorithm>
 
 #include "RBAAllocatable.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAConstraintInfo.hpp"
 #include "RBAContent.hpp"
 #include "RBAContentState.hpp"
@@ -47,7 +47,7 @@ RBAIsSounding::getModelElementType() const
 
 bool
 RBAIsSounding::executeCore(RBAConstraintInfo* info,
-                           RBAArbitrator* arb) const
+                           RBAArbitratorImpl* arb) const
 {
   bool isPassed {false};
   // Add itself to the constraint hierarchy for coverage

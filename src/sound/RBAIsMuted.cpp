@@ -16,7 +16,7 @@
 /// IsMuted class
 
 #include "RBAIsMuted.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAResultImpl.hpp"
 #include "RBAAllocatable.hpp"
 #include "RBAExpressionVisitor.hpp"
@@ -42,7 +42,7 @@ RBAIsMuted::getModelElementType() const
 
 bool
 RBAIsMuted::executeCore(RBAConstraintInfo* info,
-                        RBAArbitrator* arb) const
+                        RBAArbitratorImpl* arb) const
 {
   bool isPassed {false};
   // Add itself to the constraint hierarchy for coverage

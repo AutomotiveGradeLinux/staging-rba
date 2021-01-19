@@ -17,7 +17,7 @@
 
 #include "RBAIsHidden.hpp"
 
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAAllocatable.hpp"
 #include "RBAExpressionVisitor.hpp"
 #include "RBAResultImpl.hpp"
@@ -42,7 +42,7 @@ RBAIsHidden::getModelElementType() const
 
 bool
 RBAIsHidden::executeCore(RBAConstraintInfo* info,
-                         RBAArbitrator* arb) const
+                         RBAArbitratorImpl* arb) const
 {
   bool isPassed {false};
   // Add itself to the constraint hierarchy for coverage.

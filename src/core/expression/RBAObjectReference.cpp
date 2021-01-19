@@ -43,7 +43,7 @@ RBAObjectReference::getModelElementType() const
 
 const RBARuleObject*
 RBAObjectReference::getReferenceObjectCore(RBAConstraintInfo* info,
-                                           RBAArbitrator* arb) const
+                                           RBAArbitratorImpl* arb) const
 {
   const RBARuleObject* obj {refObject_};
   if (obj->isModelElementType(RBAModelElementType::Variable)) {

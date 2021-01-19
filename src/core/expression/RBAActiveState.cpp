@@ -23,7 +23,7 @@
 #include "RBAContent.hpp"
 #include "RBAContentState.hpp"
 #include "RBAConstraintInfo.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBALogManager.hpp"
 
 namespace rba
@@ -38,7 +38,7 @@ RBAModelElementType RBAActiveState::getModelElementType() const
   return RBAModelElementType::ActiveState;
 }
 const RBARuleObject* RBAActiveState::getReferenceObjectCore(
-    RBAConstraintInfo* info, RBAArbitrator* arb) const
+    RBAConstraintInfo* info, RBAArbitratorImpl* arb) const
 {
   LOG_addHierarchy(LOG_getSymbol());
   const RBARuleObject* returnObj {nullptr};

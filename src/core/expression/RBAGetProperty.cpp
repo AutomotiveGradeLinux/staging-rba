@@ -21,7 +21,7 @@
 #include "RBAGetProperty.hpp"
 #include "RBAExpressionVisitor.hpp"
 #include "RBASceneImpl.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBALogManager.hpp"
 #include "RBAExpressionType.hpp"
 #include "RBAModelElementType.hpp"
@@ -47,7 +47,7 @@ RBAGetProperty::getModelElementType() const
 
 std::int32_t
 RBAGetProperty::getValueCore(RBAConstraintInfo* info,
-				 RBAArbitrator* arb) const
+				 RBAArbitratorImpl* arb) const
 {
   std::int32_t value{0};
   const RBAAbstractProperty* prop{nullptr};

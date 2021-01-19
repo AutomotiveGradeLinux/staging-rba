@@ -38,7 +38,7 @@ class RBASizeOperator : public RBASetOperator
 
   void accept(RBAExpressionVisitor& visitor) override;
   RBAModelElementType getModelElementType() const override;
-  std::int32_t getValueCore(RBAConstraintInfo* info, RBAArbitrator* arb) const override;
+  std::int32_t getValueCore(RBAConstraintInfo* info, RBAArbitratorImpl* arb) const override;
 #ifdef RBA_USE_LOG
   const std::string getSymbol() const override;
   const std::string getExpressionText() const override;

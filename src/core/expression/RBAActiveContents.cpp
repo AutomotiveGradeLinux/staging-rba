@@ -21,7 +21,7 @@
 #include <memory>
 #include "RBAActiveContents.hpp"
 #include "RBAConstraintInfo.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAAllocatable.hpp"
 #include "RBAExpressionVisitor.hpp"
 #include "RBALogManager.hpp"
@@ -49,7 +49,7 @@ RBAActiveContents::getModelElementType() const
 }
 
 const RBARuleObject*
-RBAActiveContents::getReferenceObjectCore(RBAConstraintInfo* info, RBAArbitrator* arb) const
+RBAActiveContents::getReferenceObjectCore(RBAConstraintInfo* info, RBAArbitratorImpl* arb) const
 {
   LOG_addHierarchy(LOG_getSymbol());
   const RBARuleObject* returnObj {nullptr};

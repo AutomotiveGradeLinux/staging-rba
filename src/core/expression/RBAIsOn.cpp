@@ -19,7 +19,7 @@
  */
 
 #include "RBAIsOn.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAConstraintInfo.hpp"
 #include "RBAExpressionVisitor.hpp"
 #include "RBASceneImpl.hpp"
@@ -44,7 +44,7 @@ RBAIsOn::getModelElementType() const
 
 bool
 RBAIsOn::executeCore(RBAConstraintInfo* info,
-                     RBAArbitrator* arb) const
+                     RBAArbitratorImpl* arb) const
 {
   bool isPassed {false};
   // Add itself to Constraint hierarchy for coverage

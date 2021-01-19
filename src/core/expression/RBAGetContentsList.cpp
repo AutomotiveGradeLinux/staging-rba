@@ -45,7 +45,7 @@ RBAGetContentsList::getModelElementType() const
 
 const RBARuleObject*
 RBAGetContentsList::getReferenceObjectCore(RBAConstraintInfo* info,
-                                           RBAArbitrator* arb) const
+                                           RBAArbitratorImpl* arb) const
 {
   RBAConstraintInfo* const leftInfo {info->getChild(0U)};
 

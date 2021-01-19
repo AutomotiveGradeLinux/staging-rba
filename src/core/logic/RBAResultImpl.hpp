@@ -30,7 +30,7 @@
 
 namespace rba {
 
-class RBAArbitrator;
+class RBAArbitratorImpl;
 class RBAArea;
 class RBAViewContent;
 class RBAViewContentState;
@@ -60,9 +60,9 @@ class RBAContentStatus;
 class DLL_EXPORT RBAResultImpl : public RBAResult
 {
 public:
-  RBAResultImpl(const RBAArbitrator* const arb,
+  RBAResultImpl(const RBAArbitratorImpl* const arb,
                 std::unique_ptr<RBAResultSet> newPrevResultSet);
-  RBAResultImpl(const RBAArbitrator* const arb,
+  RBAResultImpl(const RBAArbitratorImpl* const arb,
                 std::unique_ptr<RBAResultSet> newPrevResultSet,
                 std::unique_ptr<RBAResultSet> newCurResultSet);
   RBAResultImpl(const RBAResultImpl* const replicationTarget);
@@ -332,7 +332,7 @@ private:
 #pragma warning(push)
 #pragma warning(disable:4251)
 #endif
-  const RBAArbitrator* arb_;
+  const RBAArbitratorImpl* arb_;
   RBAResultStatusType statusType_;
   std::string log_;
 

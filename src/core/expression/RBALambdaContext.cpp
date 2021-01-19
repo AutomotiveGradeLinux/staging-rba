@@ -56,7 +56,7 @@ RBALambdaContext::createHierarchy()
   RBAConstraintInfo dummyInfo;
   // Since it is not referenced by "AllInstanceOf..." or "SetOfOperator" 
   // used for the set of "For-All" or "Exists", nullptr is no problem
-  RBAArbitrator* dummyArb = nullptr;
+  RBAArbitratorImpl* dummyArb = nullptr;
   const RBARuleObject* objset = setObj->getReferenceObject(&dummyInfo, dummyArb);
   std::vector<const RBARuleObject*> objs;
   if(objset) {

@@ -21,7 +21,7 @@
 #include "RBAHasComeLaterThan.hpp"
 
 #include "RBAContent.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAExpressionVisitor.hpp"
 #include "RBALogManager.hpp"
 #include "RBAModelElementType.hpp"
@@ -44,7 +44,7 @@ RBAHasComeLaterThan::getModelElementType() const
 
 bool
 RBAHasComeLaterThan::executeCore(RBAConstraintInfo* info,
-				     RBAArbitrator* arb) const
+				     RBAArbitratorImpl* arb) const
 {
   // Add itself to the constraint hierarchy for coverage
   LOG_addHierarchy(LOG_getSymbol());

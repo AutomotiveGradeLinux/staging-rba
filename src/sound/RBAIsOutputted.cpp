@@ -16,7 +16,7 @@
 /// IsOutputted class
 
 #include "RBAIsOutputted.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAZoneImpl.hpp"
 #include "RBAResultImpl.hpp"
 #include "RBAContentState.hpp"
@@ -44,7 +44,7 @@ RBAIsOutputted::getModelElementType() const
 
 bool
 RBAIsOutputted::executeCore(RBAConstraintInfo* info,
-                                RBAArbitrator* arb) const
+                                RBAArbitratorImpl* arb) const
 {
   bool isPassed {false};
   // Add itself to the constraint hierarchy for coverage

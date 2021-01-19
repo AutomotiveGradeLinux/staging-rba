@@ -19,7 +19,7 @@
 
 #include "RBAAllInstanceOfViewContent.hpp"
 #include "RBAViewContentImpl.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAExpressionVisitor.hpp"
 #include "RBAModelImpl.hpp"
 #include "RBAModelElementType.hpp"
@@ -44,7 +44,7 @@ RBAAllInstanceOfViewContent::getModelElementType() const
 
 const RBARuleObject*
 RBAAllInstanceOfViewContent::getReferenceObjectCore(RBAConstraintInfo* info,
-                                                    RBAArbitrator* arb) const
+                                                    RBAArbitratorImpl* arb) const
 {
   return &allViewContentSet_;
 }

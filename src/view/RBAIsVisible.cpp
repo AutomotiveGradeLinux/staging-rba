@@ -16,7 +16,7 @@
 /// IsVisible class
 
 #include "RBAAllocatable.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAConstraintInfo.hpp"
 #include "RBAContent.hpp"
 #include "RBAContentState.hpp"
@@ -44,7 +44,7 @@ RBAIsVisible::getModelElementType() const
 
 bool
 RBAIsVisible::executeCore(RBAConstraintInfo* info,
-                          RBAArbitrator* arb) const
+                          RBAArbitratorImpl* arb) const
 {
   bool isPassed {false};
   // Add itself to the constraint hierarchy for coverage.

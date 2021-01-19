@@ -19,7 +19,7 @@
 
 #include "RBAOutputtingSound.hpp"
 #include "RBAAllocatable.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAContent.hpp"
 #include "RBAContentState.hpp"
 #include "RBAExpressionVisitor.hpp"
@@ -50,7 +50,7 @@ RBAOutputtingSound::getModelElementType() const
 
 const RBARuleObject*
 RBAOutputtingSound::getReferenceObjectCore(RBAConstraintInfo* info,
-                                           RBAArbitrator* arb) const
+                                           RBAArbitratorImpl* arb) const
 {
   const RBARuleObject* object {nullptr};
   const auto leftInfo = info->getChild(0U);

@@ -21,7 +21,7 @@
 #include "RBAMaxOperator.hpp"
 #include "RBAAllocatable.hpp"
 #include "RBAContent.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBALogManager.hpp"
 #include "RBAConstraintInfo.hpp"
 #include "RBAExpressionVisitor.hpp"
@@ -44,7 +44,7 @@ RBAMaxOperator::getModelElementType() const
 }
 
 const RBARuleObject* RBAMaxOperator::getReferenceObjectCore(
-    RBAConstraintInfo* info, RBAArbitrator* arb) const
+    RBAConstraintInfo* info, RBAArbitratorImpl* arb) const
 {
   LOG_addHierarchy(LOG_getSymbol());
   const RBARuleObject* returnObj {nullptr};

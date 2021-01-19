@@ -48,7 +48,7 @@ RBAForAllOperator::getModelElementType() const
 
 bool
 RBAForAllOperator::executeCore(RBAConstraintInfo* info,
-				   RBAArbitrator * arb) const
+				   RBAArbitratorImpl * arb) const
 {
   const RBAExpression* const setObj {getLhsOperand()};
   RBALambdaExpression* const lambda {getLambda()};

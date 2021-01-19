@@ -27,7 +27,7 @@
 namespace rba
 {
 
-class RBAArbitrator;
+class RBAArbitratorImpl;
 
 class DLL_EXPORT RBAConstraintImpl : public RBAConstraint,
                                      public RBAAbstractConstraint
@@ -45,7 +45,7 @@ public:
   std::string getName() const override;
   bool isConstraint() const override;
   bool isRuntime() const;
-  bool execute(RBAArbitrator* const arb);
+  bool execute(RBAArbitratorImpl* const arb);
 
 private:
   bool runtime_ {RUNTIME_EDEFAULT};

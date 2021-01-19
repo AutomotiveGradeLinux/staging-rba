@@ -38,7 +38,7 @@ RBAModelElementType RBASizeOperator::getModelElementType() const
   return RBAModelElementType::SizeOperator;
 }
 std::int32_t RBASizeOperator::getValueCore(RBAConstraintInfo* info,
-                                           RBAArbitrator* arb) const
+                                           RBAArbitratorImpl* arb) const
 {
   LOG_addHierarchy(LOG_getSymbol());
   std::int32_t returnValue {-99};

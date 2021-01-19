@@ -21,7 +21,7 @@
 #include "RBAAllocatable.hpp"
 #include "RBARuleObject.hpp"
 #include "RBAContentState.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAResultImpl.hpp"
 #include "RBAContent.hpp"
 #include "RBAExpressionVisitor.hpp"
@@ -46,7 +46,7 @@ RBAIsDisplayed::getModelElementType() const
 
 bool
 RBAIsDisplayed::executeCore(RBAConstraintInfo* info,
-                            RBAArbitrator* arb) const
+                            RBAArbitratorImpl* arb) const
 {
   bool isPassed {false};
   // Add itself to the constraint hierarchy for coverage.

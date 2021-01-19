@@ -53,7 +53,7 @@ RBASelectOperator::getModelElementType() const
 }
 
 const RBARuleObject* RBASelectOperator::getReferenceObjectCore(
-    RBAConstraintInfo* info, RBAArbitrator* arb) const
+    RBAConstraintInfo* info, RBAArbitratorImpl* arb) const
 {
   LOG_addHierarchy(LOG_getSymbol());
   const RBARuleObject* returnObj {nullptr};

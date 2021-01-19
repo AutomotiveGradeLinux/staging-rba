@@ -41,7 +41,7 @@ RBANotOperator::getModelElementType() const
 
 bool
 RBANotOperator::executeCore(RBAConstraintInfo* info,
-                            RBAArbitrator* arb) const
+                            RBAArbitratorImpl* arb) const
 {
   bool isPassed {false};
   // Add itself to Constraint hierarchy for coverage

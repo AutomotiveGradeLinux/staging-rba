@@ -20,7 +20,7 @@
 
 #include "RBAHasComeEarlierThan.hpp"
 #include "RBAContent.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAExpressionVisitor.hpp"
 #include "RBALogManager.hpp"
 #include "RBAModelElementType.hpp"
@@ -43,7 +43,7 @@ void RBAHasComeEarlierThan::accept(RBAExpressionVisitor& visitor)
 
 bool
 RBAHasComeEarlierThan::executeCore(RBAConstraintInfo* info,
-				       RBAArbitrator* arb) const
+				       RBAArbitratorImpl* arb) const
 {
   // Add itself to the constraint hierarchy for coverage
   LOG_addHierarchy(LOG_getSymbol());

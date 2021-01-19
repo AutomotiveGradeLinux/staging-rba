@@ -44,7 +44,7 @@ RBALetStatement::accept(RBAExpressionVisitor& visitor)
   visitor.visit(*this);
 }
 
-void RBALetStatement::setVariable(RBAArbitrator* const arb)
+void RBALetStatement::setVariable(RBAArbitratorImpl* const arb)
 {
   RBAConstraintInfo* const info {variable_->createConstraintInfo()};
   variable_->setRuleObj(getLhsOperand()->getReferenceObject(info, arb));

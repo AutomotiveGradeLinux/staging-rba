@@ -20,7 +20,7 @@
 #include "RBAAllocatedContent.hpp"
 
 #include "RBAAllocatable.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAContentState.hpp"
 #include "RBAExpressionVisitor.hpp"
 #include "RBALogManager.hpp"
@@ -47,7 +47,7 @@ RBAAllocatedContent::getModelElementType() const
 
 const RBARuleObject*
 RBAAllocatedContent::getReferenceObjectCore(RBAConstraintInfo* info,
-                                            RBAArbitrator* arb) const
+                                            RBAArbitratorImpl* arb) const
 {
   const RBARuleObject* object {nullptr};  // return value
   const auto leftInfo = info->getChild(0U);

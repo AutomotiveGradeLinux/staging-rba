@@ -20,7 +20,7 @@
 
 #include "RBAIsActive.hpp"
 #include "RBAContent.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAExpressionVisitor.hpp"
 #include "RBALogManager.hpp"
 #include "RBAModelElementType.hpp"
@@ -43,7 +43,7 @@ RBAIsActive::getModelElementType() const
 
 bool
 RBAIsActive::executeCore(RBAConstraintInfo* info,
-                             RBAArbitrator* arb) const
+                             RBAArbitratorImpl* arb) const
 {
   bool isPassed {false};
   // Add itself to the constraint hierarchy for coverage

@@ -20,7 +20,7 @@
 
 #include "RBAAllInstanceOfSoundContent.hpp"
 #include "RBASoundContentImpl.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAExpressionVisitor.hpp"
 #include "RBAModelImpl.hpp"
 #include "RBAModelElementType.hpp"
@@ -46,7 +46,7 @@ RBAAllInstanceOfSoundContent::getModelElementType() const
 
 const RBARuleObject*
 RBAAllInstanceOfSoundContent::getReferenceObjectCore(RBAConstraintInfo* info,
-                                                     RBAArbitrator* arb) const
+                                                     RBAArbitratorImpl* arb) const
 {
   return &allSoundContentSet_;
 }

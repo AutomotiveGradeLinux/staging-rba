@@ -41,7 +41,7 @@ RBAExpression::accept(RBAExpressionVisitor& visitor)
 }
 
 bool
-RBAExpression::execute(RBAConstraintInfo* const info, RBAArbitrator * const arb) const
+RBAExpression::execute(RBAConstraintInfo* const info, RBAArbitratorImpl * const arb) const
 {
   info->setExpression(this);
   for (RBALetStatement* const& letStatement : letStatements_) {
@@ -57,7 +57,7 @@ RBAExpression::execute(RBAConstraintInfo* const info, RBAArbitrator * const arb)
 }
 
 bool
-RBAExpression::executeCore(RBAConstraintInfo* info, RBAArbitrator * arb) const
+RBAExpression::executeCore(RBAConstraintInfo* info, RBAArbitratorImpl * arb) const
 {
   // This function is called when an Expression that does not define 
   // getReferenceObject() in evaluate() is specified. 
@@ -67,7 +67,7 @@ RBAExpression::executeCore(RBAConstraintInfo* info, RBAArbitrator * arb) const
 
 const RBARuleObject*
 RBAExpression::getReferenceObject(RBAConstraintInfo* const info,
-                                      RBAArbitrator* const arb) const
+                                      RBAArbitratorImpl* const arb) const
 {
   info->setExpression(this);
   for (RBALetStatement* const& letStatement : letStatements_) {
@@ -78,7 +78,7 @@ RBAExpression::getReferenceObject(RBAConstraintInfo* const info,
 
 const RBARuleObject*
 RBAExpression::getReferenceObjectCore(RBAConstraintInfo* info,
-                                      RBAArbitrator* arb) const
+                                      RBAArbitratorImpl* arb) const
 {
   // This function is called when an Expression that does not define 
   // getReferenceObject() in evaluateObject() is specified. 
@@ -86,7 +86,7 @@ RBAExpression::getReferenceObjectCore(RBAConstraintInfo* info,
 }
 
 std::int32_t
-RBAExpression::getValue(RBAConstraintInfo* const info, RBAArbitrator * const arb) const
+RBAExpression::getValue(RBAConstraintInfo* const info, RBAArbitratorImpl * const arb) const
 {
   info->setExpression(this);
   for (RBALetStatement* const& letStatement : letStatements_) {
@@ -101,7 +101,7 @@ RBAExpression::getLetStatements() const
   return letStatements_;
 }
 std::int32_t
-RBAExpression::getValueCore(RBAConstraintInfo* info, RBAArbitrator * arb) const
+RBAExpression::getValueCore(RBAConstraintInfo* info, RBAArbitratorImpl * arb) const
 {
   // This function is called when an Expression that does not define 
   // getValue() in evaluateValue() is specified. 
@@ -109,7 +109,7 @@ RBAExpression::getValueCore(RBAConstraintInfo* info, RBAArbitrator * arb) const
 }
 
 void
-RBAExpression::doAction(RBAConstraintInfo* const info, RBAArbitrator* const arb)
+RBAExpression::doAction(RBAConstraintInfo* const info, RBAArbitratorImpl* const arb)
 {
   info->setExpression(this);
   doActionCore(info, arb);
@@ -117,7 +117,7 @@ RBAExpression::doAction(RBAConstraintInfo* const info, RBAArbitrator* const arb)
 }
 
 void
-RBAExpression::doActionCore(RBAConstraintInfo* info, RBAArbitrator* arb)
+RBAExpression::doActionCore(RBAConstraintInfo* info, RBAArbitratorImpl* arb)
 {
   // This function is called when an Expression that does not define 
   // doAction() in evaluateDoAction() is specified. 

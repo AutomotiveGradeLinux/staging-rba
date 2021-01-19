@@ -20,7 +20,7 @@
 
 #include "RBAAllInstanceOfArea.hpp"
 #include "RBAAreaImpl.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAExpressionVisitor.hpp"
 #include "RBAModelImpl.hpp"
 #include "RBAModelElementType.hpp"
@@ -45,7 +45,7 @@ RBAAllInstanceOfArea::getModelElementType() const
 
 const RBARuleObject*
 RBAAllInstanceOfArea::getReferenceObjectCore(RBAConstraintInfo* info,
-                                             RBAArbitrator* arb) const
+                                             RBAArbitratorImpl* arb) const
 {
   return &allAreaSet_;
 }

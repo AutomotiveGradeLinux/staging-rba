@@ -26,7 +26,7 @@
 #include "RBAAllocatableSet.hpp"
 #include "RBAAllocatedContent.hpp"
 #include "RBAAndOperator.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAConstraintInfo.hpp"
 #include "RBAContent.hpp"
 #include "RBAContentSet.hpp"
@@ -299,7 +299,7 @@ void RBAAbstractCollector::visit(RBAForAllOperator& exp)
 {
   visitLetStatement(exp);
   RBAConstraintInfo dummyInfo;
-  RBAArbitrator dummyArb;
+  RBAArbitratorImpl dummyArb;
   dummyArb.setModel(model_);
   dummyArb.setResult(std::make_unique<RBAResultImpl>(
       &dummyArb, std::make_unique<RBAResultSet>()));
@@ -335,7 +335,7 @@ void RBAAbstractCollector::visit(RBAExistsOperator& exp)
 {
   visitLetStatement(exp);
   RBAConstraintInfo dummyInfo;
-  RBAArbitrator dummyArb;
+  RBAArbitratorImpl dummyArb;
   dummyArb.setModel(model_);
   dummyArb.setResult(std::make_unique<RBAResultImpl>(
       &dummyArb, std::make_unique<RBAResultSet>()));
@@ -424,7 +424,7 @@ void RBAAbstractCollector::visit(RBAMaxOperator& exp)
 {
   visitLetStatement(exp);
   RBAConstraintInfo dummyInfo;
-  RBAArbitrator dummyArb;
+  RBAArbitratorImpl dummyArb;
   dummyArb.setModel(model_);
   dummyArb.setResult(std::make_unique<RBAResultImpl>(
       &dummyArb, std::make_unique<RBAResultSet>()));
@@ -460,7 +460,7 @@ void RBAAbstractCollector::visit(RBAMinOperator& exp)
 {
   visitLetStatement(exp);
   RBAConstraintInfo dummyInfo;
-  RBAArbitrator dummyArb;
+  RBAArbitratorImpl dummyArb;
   dummyArb.setModel(model_);
   dummyArb.setResult(std::make_unique<RBAResultImpl>(
       &dummyArb, std::make_unique<RBAResultSet>()));
@@ -496,7 +496,7 @@ void RBAAbstractCollector::visit(RBASelectOperator& exp)
 {
   visitLetStatement(exp);
   RBAConstraintInfo dummyInfo;
-  RBAArbitrator dummyArb;
+  RBAArbitratorImpl dummyArb;
   dummyArb.setModel(model_);
   dummyArb.setResult(std::make_unique<RBAResultImpl>(
       &dummyArb, std::make_unique<RBAResultSet>()));

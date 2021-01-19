@@ -21,7 +21,7 @@
 #include "RBAHasBeenDisplayed.hpp"
 #include "RBAModelElementType.hpp"
 #include "RBAExpressionType.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAConstraintInfo.hpp"
 #include "RBAContent.hpp"
 #include "RBAExpressionVisitor.hpp"
@@ -41,7 +41,7 @@ RBAModelElementType RBAHasBeenDisplayed::getModelElementType() const
 }
 
 bool RBAHasBeenDisplayed::executeCore(RBAConstraintInfo* info,
-                                      RBAArbitrator* arb) const
+                                      RBAArbitratorImpl* arb) const
 {
   bool isPassed {false};
   LOG_addHierarchy(LOG_getSymbol());

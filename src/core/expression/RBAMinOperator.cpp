@@ -19,7 +19,7 @@
 #include "RBAMinOperator.hpp"
 #include "RBAAllocatable.hpp"
 #include "RBAContent.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAConstraintInfo.hpp"
 #include "RBAExpressionVisitor.hpp"
 #include "RBALambdaExpression.hpp"
@@ -42,7 +42,7 @@ RBAMinOperator::getModelElementType() const
 }
 
 const RBARuleObject* RBAMinOperator::getReferenceObjectCore(
-    RBAConstraintInfo* info, RBAArbitrator* arb) const
+    RBAConstraintInfo* info, RBAArbitratorImpl* arb) const
 {
   LOG_addHierarchy(LOG_getSymbol());
   const RBARuleObject* returnObj {nullptr};

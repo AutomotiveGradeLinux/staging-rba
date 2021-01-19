@@ -44,7 +44,7 @@ RBAIntegerValue::getModelElementType() const
 }
 
 std::int32_t
-RBAIntegerValue::getValueCore(RBAConstraintInfo* info, RBAArbitrator * arb) const
+RBAIntegerValue::getValueCore(RBAConstraintInfo* info, RBAArbitratorImpl * arb) const
 {
   return getValue();
 }

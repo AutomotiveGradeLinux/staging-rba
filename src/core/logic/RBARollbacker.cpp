@@ -21,7 +21,7 @@
 #include "RBARollbacker.hpp"
 #include "RBAModelImpl.hpp"
 #include "RBABackUpAllocatable.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 
 namespace rba
 {

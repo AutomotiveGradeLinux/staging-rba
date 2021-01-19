@@ -57,7 +57,7 @@ RBAConstraintImpl::isRuntime() const
 }
 
 bool
-RBAConstraintImpl::execute(RBAArbitrator* const arb)
+RBAConstraintImpl::execute(RBAArbitratorImpl* const arb)
 {
   LOG_arbitrateConstraintLogicLogLine("    constraint expression["
 						 + getExpression()->LOG_getExpressionText()

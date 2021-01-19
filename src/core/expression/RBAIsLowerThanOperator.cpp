@@ -17,7 +17,7 @@
 /// IsLowerThanOperator class definition file
 
 #include "RBAIsLowerThanOperator.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAExpressionVisitor.hpp"
 #include "RBALogManager.hpp"
 #include "RBAModelElementType.hpp"
@@ -41,7 +41,7 @@ RBAIsLowerThanOperator::getModelElementType() const
 
 bool
 RBAIsLowerThanOperator::executeCore(RBAConstraintInfo* info,
-                                    RBAArbitrator* arb) const
+                                    RBAArbitratorImpl* arb) const
 {
   bool isPassed {false};
   // Add itself to Constraint hierarchy for coverage

@@ -31,7 +31,7 @@ namespace rba
 
 class RBAExpressionVisitor;
 class RBALetStatement;
-class RBAArbitrator;
+class RBAArbitratorImpl;
 class RBARuleObject;
 class RBAConstraintInfo;
 #ifdef RBA_USE_LOG
@@ -51,11 +51,11 @@ public:
   virtual ~RBAExpression()=default;
   void addLetStatement(RBALetStatement* const letStatement);
   virtual void accept(RBAExpressionVisitor& visitor);
-  bool execute(RBAConstraintInfo* const info, RBAArbitrator* const arb) const;
+  bool execute(RBAConstraintInfo* const info, RBAArbitratorImpl* const arb) const;
   const RBARuleObject* getReferenceObject(RBAConstraintInfo* const info,
-                                          RBAArbitrator* const arb) const;
-  std::int32_t getValue(RBAConstraintInfo* const info, RBAArbitrator* const arb) const;
-  void doAction(RBAConstraintInfo* const info, RBAArbitrator* const arb);
+                                          RBAArbitratorImpl* const arb) const;
+  std::int32_t getValue(RBAConstraintInfo* const info, RBAArbitratorImpl* const arb) const;
+  void doAction(RBAConstraintInfo* const info, RBAArbitratorImpl* const arb);
   const std::vector<RBALetStatement*>& getLetStatements() const;
 
   // Log
@@ -67,12 +67,12 @@ public:
 #endif
 
 protected:
-  virtual bool executeCore(RBAConstraintInfo* info, RBAArbitrator* arb) const;
+  virtual bool executeCore(RBAConstraintInfo* info, RBAArbitratorImpl* arb) const;
   virtual const RBARuleObject* getReferenceObjectCore(RBAConstraintInfo* info,
-                                                      RBAArbitrator* arb) const;
+                                                      RBAArbitratorImpl* arb) const;
   virtual std::int32_t getValueCore(RBAConstraintInfo* info,
-                                    RBAArbitrator* arb) const;
-  virtual void doActionCore(RBAConstraintInfo* info, RBAArbitrator* arb);
+                                    RBAArbitratorImpl* arb) const;
+  virtual void doActionCore(RBAConstraintInfo* info, RBAArbitratorImpl* arb);
 
 private:
 #ifdef _MSC_VER

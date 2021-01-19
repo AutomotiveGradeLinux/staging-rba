@@ -20,7 +20,7 @@
 
 #include "RBALambdaExpression.hpp"
 #include "RBAVariable.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAConstraintInfo.hpp"
 #include "RBAModelElementType.hpp"
 
@@ -58,7 +58,7 @@ RBALambdaExpression::getModelElementType() const
 }
 
 bool
-RBALambdaExpression::executeCore(RBAConstraintInfo* info, RBAArbitrator * arb) const
+RBALambdaExpression::executeCore(RBAConstraintInfo* info, RBAArbitratorImpl * arb) const
 {
   getX()->setRuleObj(ruleObj_);
 
@@ -74,7 +74,7 @@ RBALambdaExpression::executeCore(RBAConstraintInfo* info, RBAArbitrator * arb) c
 
 const RBARuleObject*
 RBALambdaExpression::getReferenceObjectCore(RBAConstraintInfo* info,
-                                            RBAArbitrator* arb) const
+                                            RBAArbitratorImpl* arb) const
 {
   getX()->setRuleObj(ruleObj_);
 
@@ -88,7 +88,7 @@ RBALambdaExpression::getReferenceObjectCore(RBAConstraintInfo* info,
 }
 std::int32_t
 RBALambdaExpression::getValueCore(RBAConstraintInfo* info,
-                                  RBAArbitrator* arb) const
+                                  RBAArbitratorImpl* arb) const
 {
   getX()->setRuleObj(ruleObj_);
 

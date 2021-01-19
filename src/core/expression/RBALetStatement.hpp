@@ -42,7 +42,7 @@ public:
   void accept(RBAExpressionVisitor& visitor) override;
   RBAModelElementType getModelElementType() const override;
   void setVariable(RBAVariable* const var);
-  void setVariable(RBAArbitrator* const arb);
+  void setVariable(RBAArbitratorImpl* const arb);
 
 private:
   RBAVariable* variable_;

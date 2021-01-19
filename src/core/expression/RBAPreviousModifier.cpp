@@ -55,7 +55,7 @@ RBAPreviousModifier::getObjReference() const
 
 const RBARuleObject*
 RBAPreviousModifier::getReferenceObjectCore(RBAConstraintInfo* info,
-                                            RBAArbitrator* arb) const
+                                            RBAArbitratorImpl* arb) const
 {
   previousObj_->setRefObject(objReference_->getReferenceObject(info, arb));
   return previousObj_.get();

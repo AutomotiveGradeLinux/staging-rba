@@ -46,12 +46,12 @@ public:
 
   void accept(RBAExpressionVisitor& visitor) override;
   RBAModelElementType getModelElementType() const override;
-  bool executeCore(RBAConstraintInfo* info, RBAArbitrator* arb) const override;
+  bool executeCore(RBAConstraintInfo* info, RBAArbitratorImpl* arb) const override;
   const RBARuleObject* getReferenceObjectCore(RBAConstraintInfo* info,
-                                                      RBAArbitrator* arb) const override;
+                                                      RBAArbitratorImpl* arb) const override;
   std::int32_t getValueCore(RBAConstraintInfo* info,
-                                    RBAArbitrator* arb) const override;
-  void doActionCore(RBAConstraintInfo* info, RBAArbitrator* arb) override;
+                                    RBAArbitratorImpl* arb) const override;
+  void doActionCore(RBAConstraintInfo* info, RBAArbitratorImpl* arb) override;
 
   // Log
 #ifdef RBA_USE_LOG

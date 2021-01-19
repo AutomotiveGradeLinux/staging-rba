@@ -42,7 +42,7 @@ RBAModelElementType RBAIsTypeOfOperator::getModelElementType() const
 {
   return RBAModelElementType::IsTypeOfOperator;
 }
-bool RBAIsTypeOfOperator::executeCore(RBAConstraintInfo* info, RBAArbitrator* arb) const
+bool RBAIsTypeOfOperator::executeCore(RBAConstraintInfo* info, RBAArbitratorImpl* arb) const
 {
   bool isPassed {false};
   LOG_addHierarchy(LOG_getSymbol());

@@ -42,7 +42,7 @@ RBAAndOperator::getModelElementType() const
 
 bool
 RBAAndOperator::executeCore(RBAConstraintInfo* info,
-                            RBAArbitrator * arb) const
+                            RBAArbitratorImpl * arb) const
 {
   // Add itself to the constraint hierarchy for coverage
   LOG_addHierarchy(LOG_getSymbol());

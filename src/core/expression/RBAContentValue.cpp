@@ -22,7 +22,7 @@
 #include "RBAContentValue.hpp"
 #include "RBAAllocatable.hpp"
 #include "RBAContentState.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAExpressionVisitor.hpp"
 #include "RBALogManager.hpp"
 #include "RBAModelElementType.hpp"
@@ -48,7 +48,7 @@ RBAContentValue::getModelElementType() const
 }
 
 std::int32_t
-RBAContentValue::getValueCore(RBAConstraintInfo* info, RBAArbitrator* arb) const
+RBAContentValue::getValueCore(RBAConstraintInfo* info, RBAArbitratorImpl* arb) const
 {
   std::int32_t result { -99 };
   const auto leftInfo = info->getChild(0U);

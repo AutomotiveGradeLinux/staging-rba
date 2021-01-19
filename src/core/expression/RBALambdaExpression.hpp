@@ -26,7 +26,7 @@
 namespace rba
 {
 
-class RBAArbitrator;
+class RBAArbitratorImpl;
 class RBAConstraintInfo;
 class RBAVariable;
 class RBARuleObject;
@@ -48,11 +48,11 @@ public:
   RBAExpression* const getBodyText() const;
 
   RBAModelElementType getModelElementType() const override;
-  bool executeCore(RBAConstraintInfo* info, RBAArbitrator* arb) const override;
+  bool executeCore(RBAConstraintInfo* info, RBAArbitratorImpl* arb) const override;
   const RBARuleObject* getReferenceObjectCore(RBAConstraintInfo* info,
-                                                      RBAArbitrator* arb) const override;
+                                                      RBAArbitratorImpl* arb) const override;
   std::int32_t getValueCore(RBAConstraintInfo* info,
-                                    RBAArbitrator* arb) const override;
+                                    RBAArbitratorImpl* arb) const override;
 
   void setRuleObj(const RBARuleObject* const ruleObj);
   void clearRuleObj();

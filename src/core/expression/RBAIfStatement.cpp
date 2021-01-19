@@ -78,7 +78,7 @@ RBAIfStatement::getModelElementType() const
 
 bool
 RBAIfStatement::executeCore(RBAConstraintInfo* info,
-                            RBAArbitrator* arb) const
+                            RBAArbitratorImpl* arb) const
 {
   LOG_addHierarchy("IF");
   bool isPassed;
@@ -116,7 +116,7 @@ RBAIfStatement::executeCore(RBAConstraintInfo* info,
 
 const RBARuleObject*
 RBAIfStatement::getReferenceObjectCore(RBAConstraintInfo* info,
-                                       RBAArbitrator* arb) const
+                                       RBAArbitratorImpl* arb) const
 {
   LOG_addHierarchy("IF");
   const RBARuleObject* object {nullptr};
@@ -144,7 +144,7 @@ RBAIfStatement::getReferenceObjectCore(RBAConstraintInfo* info,
 
 std::int32_t
 RBAIfStatement::getValueCore(RBAConstraintInfo* info,
-                             RBAArbitrator* arb) const
+                             RBAArbitratorImpl* arb) const
 {
   LOG_addHierarchy("IF");
   std::int32_t value;
@@ -172,7 +172,7 @@ RBAIfStatement::getValueCore(RBAConstraintInfo* info,
 
 void
 RBAIfStatement::doActionCore(RBAConstraintInfo* info,
-                             RBAArbitrator* arb)
+                             RBAArbitratorImpl* arb)
 {
   LOG_addHierarchy("IF");
   RBAConstraintInfo* const leftInfo {info->getChild(0U)};

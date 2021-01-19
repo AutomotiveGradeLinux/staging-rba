@@ -44,7 +44,7 @@ public:
   void setObjReference(RBAExpression* const newObjRef);
   RBAExpression* const getObjReference() const;
   const RBARuleObject* getReferenceObjectCore(RBAConstraintInfo* info,
-                                              RBAArbitrator* arb) const override;
+                                              RBAArbitratorImpl* arb) const override;
 
   // Log
 #ifdef RBA_USE_LOG

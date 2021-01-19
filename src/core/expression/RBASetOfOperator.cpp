@@ -54,7 +54,7 @@ RBASetOfOperator::getModelElementType() const
 
 const RBARuleObject*
 RBASetOfOperator::getReferenceObjectCore(RBAConstraintInfo* info,
-                                         RBAArbitrator* arb) const
+                                         RBAArbitratorImpl* arb) const
 {
   allocatableSet_->clear();
   contentSet_->clear();
@@ -105,7 +105,7 @@ RBASetOfOperator::getReferenceObjectCore(RBAConstraintInfo* info,
 }
 
 void
-RBASetOfOperator::doActionCore(RBAConstraintInfo* info, RBAArbitrator* arb)
+RBASetOfOperator::doActionCore(RBAConstraintInfo* info, RBAArbitratorImpl* arb)
 {
   // Add itself to Constraint hierarchy for coverage
   LOG_addHierarchy("SetOf");

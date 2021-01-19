@@ -21,7 +21,7 @@
 #include "RBAResultImpl.hpp"
 
 #include "RBAContentStatusType.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAViewContentImpl.hpp"
 #include "RBAViewContentStateImpl.hpp"
 #include "RBASoundContentImpl.hpp"
@@ -42,7 +42,7 @@
 
 namespace rba {
 
-RBAResultImpl::RBAResultImpl(const RBAArbitrator* const arb,
+RBAResultImpl::RBAResultImpl(const RBAArbitratorImpl* const arb,
                               std::unique_ptr<RBAResultSet> newPrevResultSet):
                                 RBAResult(),
                                 preResultSet_{std::move(newPrevResultSet)},
@@ -54,7 +54,7 @@ RBAResultImpl::RBAResultImpl(const RBAArbitrator* const arb,
   curResultSet_->copyProperties(preResultSet_);
 }
 
-RBAResultImpl::RBAResultImpl(const RBAArbitrator* const arb,
+RBAResultImpl::RBAResultImpl(const RBAArbitratorImpl* const arb,
                               std::unique_ptr<RBAResultSet> newPrevResultSet,
                               std::unique_ptr<RBAResultSet> newCurResultSet):
                                 RBAResult(),

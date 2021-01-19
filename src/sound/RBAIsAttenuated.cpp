@@ -19,7 +19,7 @@
 
 #include "RBAExpression.hpp"
 #include "RBAZoneImpl.hpp"
-#include "RBAArbitrator.hpp"
+#include "RBAArbitratorImpl.hpp"
 #include "RBAExpressionVisitor.hpp"
 #include "RBAResultImpl.hpp"
 #include "RBALogManager.hpp"
@@ -44,7 +44,7 @@ RBAIsAttenuated::getModelElementType() const
 
 bool
 RBAIsAttenuated::executeCore(RBAConstraintInfo* info,
-                                 RBAArbitrator* arb) const
+                                 RBAArbitratorImpl* arb) const
 {
   bool isPassed {false};
   LOG_addHierarchy(LOG_getSymbol());

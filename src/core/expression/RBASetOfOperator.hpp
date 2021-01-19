@@ -52,8 +52,8 @@ public:
 
 protected:
   const RBARuleObject* getReferenceObjectCore(RBAConstraintInfo* info,
-                                              RBAArbitrator* arb) const override;
-  void doActionCore(RBAConstraintInfo* info, RBAArbitrator* arb) override;
+                                              RBAArbitratorImpl* arb) const override;
+  void doActionCore(RBAConstraintInfo* info, RBAArbitratorImpl* arb) override;
 
 private:
 #ifdef _MSC_VER

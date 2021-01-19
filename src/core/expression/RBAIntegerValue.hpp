@@ -42,7 +42,7 @@ public:
   std::int32_t getValue() const;
   RBAModelElementType getModelElementType() const override;
   std::int32_t getValueCore(RBAConstraintInfo* info,
-                                    RBAArbitrator * arb) const override;
+                                    RBAArbitratorImpl * arb) const override;
 
   // Log
 #ifdef RBA_USE_LOG
